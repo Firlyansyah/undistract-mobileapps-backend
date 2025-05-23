@@ -48,7 +48,7 @@ class SyncController extends Controller
                     'uuid' => $vs['uuid'],
                     'secondsLeft' => $vs['secondsLeft'],
                     'coolDownDuration' => $vs['coolDownDuration'],
-                    'coolDownEndTime' => $vs['coolDownEndTime'],
+                    'coolDownEndTime' => $vs['coolDownEndTime'] ?? null,
                     'isOnCoolDown' => $vs['isOnCoolDown'],
                     'isActive' => $vs['isActive'],
                     'isParental' => $vs['isParental'],
