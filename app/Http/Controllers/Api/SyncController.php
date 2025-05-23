@@ -38,7 +38,6 @@ class SyncController extends Controller
             VariableSession::updateOrCreate(
                 ['uuid' => $vs['uuid'], 'userId' => $userId],
                 [
-                    'userId' => $userId,
                     'appName' => $vs['appName'],
                     'packageName' => $vs['packageName'],
                     'secondsLeft' => $vs['secondsLeft'],
@@ -56,8 +55,9 @@ class SyncController extends Controller
             BlockPermanent::updateOrCreate(
                 ['uuid' => $bp['uuid'], 'userId' => $userId],
                 [
-                    'userId' => $userId,
                     'appName' => $bp['appName'],
+                    'packageName' => $bp['packageName'],
+                    'isActive' => $bp['isActive'],
                     'isParental' => $bp['isParental'],
                 ]
             );
@@ -68,7 +68,6 @@ class SyncController extends Controller
             DailyLimit::updateOrCreate(
                 ['uuid' => $dl['uuid'], 'userId' => $userId],
                 [
-                    'userId' => $userId,
                     'appName' => $dl['appName'],
                     'packageName' => $dl['packageName'],
                     'icon' => $dl['icon'],
