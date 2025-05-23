@@ -11,4 +11,4 @@ Route::get('/user', function (Request $request) {
 
 Route::post('/login', [AuthController::class, 'login']);
 
-Route::post('/sync/all', [SyncController::class], 'syncAll');
+Route::post('/sync/all', [SyncController::class, 'syncAll']);

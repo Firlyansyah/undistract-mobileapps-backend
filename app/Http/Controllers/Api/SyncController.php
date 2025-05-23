@@ -21,6 +21,7 @@ class SyncController extends Controller
             BlockSchedule::updateOrCreate(
                 ['id' => $bs['id'], 'userId' => $userId],
                 [
+                    'userId' => $userId,
                     'appName' => $bs['appName'],
                     'packageName' => $bs['packageName'],
                     'daysOfWeek' => $bs['daysOfWeek'],
@@ -38,6 +39,7 @@ class SyncController extends Controller
             VariableSession::updateOrCreate(
                 ['appName' => $vs['appName'], 'packageName' => $vs['packageName'], 'userId' => $userId],
                 [
+                    'userId' => $userId,
                     'secondsLeft' => $vs['secondsLeft'],
                     'coolDownDuration' => $vs['coolDownDuration'],
                     'coolDownEndTime' => $vs['coolDownEndTime'],
@@ -49,10 +51,11 @@ class SyncController extends Controller
         }
 
         // Sync BlockPermanents
-        foreach ($request->input('block_permanents', []) as $bp) {
+        foreach ($request->input('blockPermanents', []) as $bp) {
             BlockPermanent::updateOrCreate(
                 ['packageName' => $bp['packageName'], 'userId' => $userId],
                 [
+                    'userId' => $userId,
                     'appName' => $bp['appName'],
                     'isParental' => $bp['isParental'],
                 ]
@@ -60,10 +63,11 @@ class SyncController extends Controller
         }
 
         // Sync DailyLimits
-        foreach ($request->input('setaDailyLimit', []) as $dl) {
+        foreach ($request->input('dailyLimits', []) as $dl) {
             DailyLimit::updateOrCreate(
                 ['id' => $dl['id'], 'userId' => $userId],
                 [
+                    'userId' => $userId,
                     'appName' => $dl['appName'],
                     'packageName' => $dl['packageName'],
                     'icon' => $dl['icon'],

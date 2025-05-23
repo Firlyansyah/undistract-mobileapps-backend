@@ -9,6 +9,7 @@ class BlockPermanent extends Model
     protected $table = 'block_permanent_table';
 
     protected $fillable = [
+        'userId',
         'appName',
         'packageName',
         'isActive',
