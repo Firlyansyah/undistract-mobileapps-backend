@@ -19,7 +19,10 @@ class SyncController extends Controller
         // Sync BlockSchedules
         foreach ($request->input('blockSchedules', []) as $bs) {
             BlockSchedule::updateOrCreate(
-                ['uuid' => $bs['uuid'], 'userId' => $userId],
+                [
+                    'uuid' => $bs['uuid'],
+                    'userId' => $userId
+                ],
                 [
                     'appName' => $bs['appName'],
                     'packageName' => $bs['packageName'],
@@ -36,10 +39,13 @@ class SyncController extends Controller
         // Sync VariableSessions
         foreach ($request->input('variableSessions', []) as $vs) {
             VariableSession::updateOrCreate(
-                ['uuid' => $vs['uuid'], 'userId' => $userId],
                 [
                     'appName' => $vs['appName'],
                     'packageName' => $vs['packageName'],
+                    'userId' => $userId
+                ],
+                [
+                    'uuid' => $vs['uuid'],
                     'secondsLeft' => $vs['secondsLeft'],
                     'coolDownDuration' => $vs['coolDownDuration'],
                     'coolDownEndTime' => $vs['coolDownEndTime'],
@@ -53,7 +59,10 @@ class SyncController extends Controller
         // Sync BlockPermanents
         foreach ($request->input('blockPermanents', []) as $bp) {
             BlockPermanent::updateOrCreate(
-                ['uuid' => $bp['uuid'], 'userId' => $userId],
+                [
+                    'uuid' => $bs['uuid'],
+                    'userId' => $userId
+                ],
                 [
                     'appName' => $bp['appName'],
                     'packageName' => $bp['packageName'],
@@ -66,7 +75,10 @@ class SyncController extends Controller
         // Sync DailyLimits
         foreach ($request->input('dailyLimits', []) as $dl) {
             DailyLimit::updateOrCreate(
-                ['uuid' => $dl['uuid'], 'userId' => $userId],
+                [
+                    'uuid' => $bs['uuid'],
+                    'userId' => $userId
+                ],
                 [
                     'appName' => $dl['appName'],
                     'packageName' => $dl['packageName'],
