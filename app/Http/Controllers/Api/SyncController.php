@@ -36,7 +36,7 @@ class SyncController extends Controller
         // Sync VariableSessions
         foreach ($request->input('variableSession', []) as $vs) {
             VariableSession::updateOrCreate(
-                ['appName' => $vs['appName'], 'packageName' => $vs['packageName'], 'userId' => $userId],
+                ['uuid' => $vs['uuid'], 'userId' => $userId],
                 [
                     'userId' => $userId,
                     'secondsLeft' => $vs['secondsLeft'],
@@ -52,7 +52,7 @@ class SyncController extends Controller
         // Sync BlockPermanents
         foreach ($request->input('blockPermanents', []) as $bp) {
             BlockPermanent::updateOrCreate(
-                ['packageName' => $bp['packageName'], 'userId' => $userId],
+                ['uuid' => $bp['uuid'], 'userId' => $userId],
                 [
                     'userId' => $userId,
                     'appName' => $bp['appName'],
