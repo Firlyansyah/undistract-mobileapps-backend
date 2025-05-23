@@ -9,6 +9,7 @@ class DailyLimit extends Model
     protected $table = 'daily_limits_table';
 
     protected $fillable = [
+        'uuid',
         'userId',
         'appName',
         'packageName',

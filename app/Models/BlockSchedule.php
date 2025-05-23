@@ -9,6 +9,7 @@ class BlockSchedule extends Model
     protected $table = 'block_schedules_table';
 
     protected $fillable = [
+        'uuid',
         'userId',
         'appName',
         'packageName',

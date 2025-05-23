@@ -9,6 +9,7 @@ class VariableSession extends Model
     protected $table = 'variable_session_table';
 
     protected $fillable = [
+        'uuid',
         'userId',
         'appName',
         'packageName',
