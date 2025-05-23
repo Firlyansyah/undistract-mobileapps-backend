@@ -39,6 +39,8 @@ class SyncController extends Controller
                 ['uuid' => $vs['uuid'], 'userId' => $userId],
                 [
                     'userId' => $userId,
+                    'appName' => $vs['appName'],
+                    'packageName' => $vs['packageName'],
                     'secondsLeft' => $vs['secondsLeft'],
                     'coolDownDuration' => $vs['coolDownDuration'],
                     'coolDownEndTime' => $vs['coolDownEndTime'],
