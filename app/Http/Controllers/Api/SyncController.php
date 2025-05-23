@@ -34,7 +34,7 @@ class SyncController extends Controller
         }
 
         // Sync VariableSessions
-        foreach ($request->input('variableSession', []) as $vs) {
+        foreach ($request->input('variableSessions', []) as $vs) {
             VariableSession::updateOrCreate(
                 ['uuid' => $vs['uuid'], 'userId' => $userId],
                 [
