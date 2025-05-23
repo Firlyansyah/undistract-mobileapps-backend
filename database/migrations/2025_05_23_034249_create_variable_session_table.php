@@ -21,7 +21,7 @@ return new class extends Migration
             
             $table->integer('secondsLeft');
             $table->bigInteger('coolDownDuration')->nullable(); 
-            $table->bigInteger('coolDownEndTime')->nullable(); 
+            $table->bigInteger('coolDownEndTime')->nullable()->default(null); 
             $table->boolean('isOnCoolDown');
             $table->boolean('isActive')->default(true);
             $table->boolean('isParental')->default(false);
