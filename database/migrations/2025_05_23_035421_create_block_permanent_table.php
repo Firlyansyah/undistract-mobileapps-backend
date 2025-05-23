@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('block_permanent_table', function (Blueprint $table) {
             $table->id();
+            $table->uuid('uuid')->unique();
             $table->unsignedBigInteger('userId');
             $table->foreign('userId')->references('id')->on('users')->onDelete('cascade');
             $table->string('appName');

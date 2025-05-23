@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('variable_session_table', function (Blueprint $table) {
             $table->id();
+            $table->uuid('uuid')->unique();
             $table->string('appName');
             $table->string('packageName');
             $table->primary(['appName', 'packageName']);

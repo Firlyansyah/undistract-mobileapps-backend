@@ -19,10 +19,8 @@ class SyncController extends Controller
         // Sync BlockSchedules
         foreach ($request->input('blockSchedules', []) as $bs) {
             BlockSchedule::updateOrCreate(
-                ['id' => $bs['id'], 'userId' => $userId],
+                ['uuid' => $bs['uuid'], 'userId' => $userId],
                 [
-                    'id' => $bs['id'],
-                    'userId' => $userId,
                     'appName' => $bs['appName'],
                     'packageName' => $bs['packageName'],
                     'daysOfWeek' => $bs['daysOfWeek'],
@@ -40,7 +38,6 @@ class SyncController extends Controller
             VariableSession::updateOrCreate(
                 ['appName' => $vs['appName'], 'packageName' => $vs['packageName'], 'userId' => $userId],
                 [
-                    'id' => $bs['id'],
                     'userId' => $userId,
                     'secondsLeft' => $vs['secondsLeft'],
                     'coolDownDuration' => $vs['coolDownDuration'],
@@ -57,7 +54,6 @@ class SyncController extends Controller
             BlockPermanent::updateOrCreate(
                 ['packageName' => $bp['packageName'], 'userId' => $userId],
                 [
-                    'id' => $bs['id'],
                     'userId' => $userId,
                     'appName' => $bp['appName'],
                     'isParental' => $bp['isParental'],
@@ -68,9 +64,8 @@ class SyncController extends Controller
         // Sync DailyLimits
         foreach ($request->input('dailyLimits', []) as $dl) {
             DailyLimit::updateOrCreate(
-                ['id' => $dl['id'], 'userId' => $userId],
+                ['uuid' => $dl['uuid'], 'userId' => $userId],
                 [
-                    'id' => $bs['id'],
                     'userId' => $userId,
                     'appName' => $dl['appName'],
                     'packageName' => $dl['packageName'],
