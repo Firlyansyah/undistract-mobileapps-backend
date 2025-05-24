@@ -36,6 +36,10 @@ class SyncController extends Controller
             );
         }
 
+        BlockSchedule::where('userId', $userId)
+            ->whereNotIn('uuid', $request->input('existingUuids.blockSchedules', []))
+            ->delete();
+
         // Sync VariableSessions
         foreach ($request->input('variableSessions', []) as $vs) {
             VariableSession::updateOrCreate(
@@ -56,6 +60,10 @@ class SyncController extends Controller
             );
         }
 
+        VariableSession::where('userId', $userId)
+            ->whereNotIn('uuid', $request->input('existingUuids.variableSessions', []))
+            ->delete();
+
         // Sync BlockPermanents
         foreach ($request->input('blockPermanents', []) as $bp) {
             BlockPermanent::updateOrCreate(
@@ -71,6 +79,10 @@ class SyncController extends Controller
                 ]
             );
         }
+
+        BlockPermanent::where('userId', $userId)
+            ->whereNotIn('uuid', $request->input('existingUuids.blockPermanents', []))
+            ->delete();
 
         // Sync DailyLimits
         foreach ($request->input('dailyLimits', []) as $dl) {
@@ -90,6 +102,11 @@ class SyncController extends Controller
                 ]
             );
         }
+
+        DailyLimit::where('userId', $userId)
+            ->whereNotIn('uuid', $request->input('existingUuids.dailyLimits', []))
+            ->delete();
+
         return response()->json(['message' => 'Data synced successfully.'], 200);
     }
 }
