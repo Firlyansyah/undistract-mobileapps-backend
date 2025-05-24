@@ -109,4 +109,22 @@ class SyncController extends Controller
 
         return response()->json(['message' => 'Data synced successfully.'], 200);
     }
+
+    public function fetchAll()
+    {
+        // Hardcode userId untuk testing
+        $userId = 1;
+
+        $blockSchedules = BlockSchedule::where('userId', $userId)->get();
+        $variableSessions = VariableSession::where('userId', $userId)->get();
+        $blockPermanents = BlockPermanent::where('userId', $userId)->get();
+        $dailyLimits = DailyLimit::where('userId', $userId)->get();
+
+        return response()->json([
+            'blockSchedules' => $blockSchedules,
+            'variableSessions' => $variableSessions,
+            'blockPermanents' => $blockPermanents,
+            'dailyLimits' => $dailyLimits
+        ]);
+    }
 }
