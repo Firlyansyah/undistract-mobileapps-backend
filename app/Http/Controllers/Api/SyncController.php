@@ -14,6 +14,9 @@ class SyncController extends Controller
     public function syncAll(Request $request)
     {
         $userId = $request->query('userId');
+        if (!$userId) {
+            return response()->json(['message' => 'userId is required'], 400);
+        }
 
         // Sync BlockSchedules
         foreach ($request->input('blockSchedules', []) as $bs) {
@@ -67,7 +70,7 @@ class SyncController extends Controller
         foreach ($request->input('blockPermanents', []) as $bp) {
             BlockPermanent::updateOrCreate(
                 [
-                    'uuid' => $bs['uuid'],
+                    'uuid' => $bp['uuid'],
                     'userId' => $userId
                 ],
                 [
@@ -87,7 +90,7 @@ class SyncController extends Controller
         foreach ($request->input('dailyLimits', []) as $dl) {
             DailyLimit::updateOrCreate(
                 [
-                    'uuid' => $bs['uuid'],
+                    'uuid' => $dl['uuid'],
                     'userId' => $userId
                 ],
                 [
