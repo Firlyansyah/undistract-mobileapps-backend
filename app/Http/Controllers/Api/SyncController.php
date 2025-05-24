@@ -34,6 +34,7 @@ class SyncController extends Controller
                     'endTime' => $bs['endTime'],
                     'isActive' => $bs['isActive'],
                     'isParental' => $bs['isParental'],
+                    'isSynced' => $bs['isSynced']
                 ]
             );
         }
@@ -58,6 +59,7 @@ class SyncController extends Controller
                     'isOnCoolDown' => $vs['isOnCoolDown'],
                     'isActive' => $vs['isActive'],
                     'isParental' => $vs['isParental'],
+                    'isSynced' => $vs['isSynced']
                 ]
             );
         }
@@ -78,6 +80,7 @@ class SyncController extends Controller
                     'packageName' => $bp['packageName'],
                     'isActive' => $bp['isActive'],
                     'isParental' => $bp['isParental'],
+                    'isSynced' => $bp['isSynced']
                 ]
             );
         }
@@ -101,6 +104,7 @@ class SyncController extends Controller
                     'isActive' => $dl['isActive'],
                     'isParental' => $dl['isParental'],
                     'notificationType' => $dl['notificationType'],
+                    'isSynced' => $dl['isSynced']
                 ]
             );
         }
