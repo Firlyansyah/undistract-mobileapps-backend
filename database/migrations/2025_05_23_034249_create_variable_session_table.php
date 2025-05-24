@@ -14,12 +14,10 @@ return new class extends Migration
         Schema::create('variable_session_table', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->string('appName');
-            $table->string('packageName');
-            $table->primary(['appName', 'packageName']);
             $table->unsignedBigInteger('userId');
             $table->foreign('userId')->references('id')->on('users')->onDelete('cascade');
-            
+            $table->string('appName');
+            $table->string('packageName');
             $table->integer('secondsLeft');
             $table->bigInteger('coolDownDuration')->nullable(); 
             $table->bigInteger('coolDownEndTime')->nullable()->default(null); 
