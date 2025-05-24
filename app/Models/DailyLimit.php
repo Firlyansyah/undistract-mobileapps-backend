@@ -17,7 +17,8 @@ class DailyLimit extends Model
         'timeLimitMinutes',
         'isActive',
         'isParental',
-        'notificationType'
+        'notificationType',
+        'isSynced'
     ];
 
     public function user(){

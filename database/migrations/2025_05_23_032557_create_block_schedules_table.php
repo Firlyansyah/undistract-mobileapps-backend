@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('endTime')->nullable();
             $table->boolean('isActive')->default(true);
             $table->boolean('isParental')->default(false);
+            $table->boolean('isSynced')->default(true);
             $table->timestamps();
         });
     }

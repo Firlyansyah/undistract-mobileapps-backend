@@ -18,7 +18,8 @@ class BlockSchedule extends Model
         'startTime',
         'endTime',
         'isActive',
-        'isParental'
+        'isParental',
+        'isSynced'
     ];
 
     public function user(){

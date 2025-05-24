@@ -14,7 +14,8 @@ class BlockPermanent extends Model
         'appName',
         'packageName',
         'isActive',
-        'isParental'
+        'isParental',
+        'isSynced'
     ];
 
     public function user(){
