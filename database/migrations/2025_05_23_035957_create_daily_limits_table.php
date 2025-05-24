@@ -23,7 +23,6 @@ return new class extends Migration
             $table->boolean('isActive')->default(true);
             $table->boolean('isParental')->default(false);
             $table->string('notificationType')->default('Head Nofitication');
-            $table->boolean('isSynced')->default(false);
             $table->timestamps();
         });
     }
