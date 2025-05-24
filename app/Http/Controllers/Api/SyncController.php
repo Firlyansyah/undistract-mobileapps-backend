@@ -13,8 +13,7 @@ class SyncController extends Controller
 {
     public function syncAll(Request $request)
     {
-        // Hardcode userId untuk testing
-        $userId = 1;
+        $userId = $request->query('userId');
 
         // Sync BlockSchedules
         foreach ($request->input('blockSchedules', []) as $bs) {
@@ -110,10 +109,9 @@ class SyncController extends Controller
         return response()->json(['message' => 'Data synced successfully.'], 200);
     }
 
-    public function fetchAll()
+    public function fetchAll(Request $request)
     {
-        // Hardcode userId untuk testing
-        $userId = 1;
+        $userId = $request->query('userId');
 
         $blockSchedules = BlockSchedule::where('userId', $userId)->get();
         $variableSessions = VariableSession::where('userId', $userId)->get();
