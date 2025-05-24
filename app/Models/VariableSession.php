@@ -19,6 +19,7 @@ class VariableSession extends Model
         'isOnCoolDown',
         'isActive',
         'isParental',
+        'isSynced'
     ];
 
     public function user(){

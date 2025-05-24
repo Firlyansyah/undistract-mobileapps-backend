@@ -46,12 +46,12 @@ class SyncController extends Controller
         foreach ($request->input('variableSessions', []) as $vs) {
             VariableSession::updateOrCreate(
                 [
-                    'appName' => $vs['appName'],
-                    'packageName' => $vs['packageName'],
+                    'uuid' => $vs['uuid'],
                     'userId' => $userId
                 ],
                 [
-                    'uuid' => $vs['uuid'],
+                    'appName' => $vs['appName'],
+                    'packageName' => $vs['packageName'],
                     'secondsLeft' => $vs['secondsLeft'],
                     'coolDownDuration' => $vs['coolDownDuration'],
                     'coolDownEndTime' => $vs['coolDownEndTime'] ?? null,
