@@ -7,6 +7,7 @@ use App\Models\BlockSchedule;
 use App\Models\VariableSession;
 use App\Http\Controllers\Controller;
 use App\Models\DailyLimit;
+use App\Models\UserParent;
 use Illuminate\Http\Request;
 
 class SyncController extends Controller
@@ -113,6 +114,19 @@ class SyncController extends Controller
             ->whereNotIn('uuid', $request->input('existingUuids.dailyLimits', []))
             ->delete();
 
+        // Sync user parent (PIN)
+        foreach ($request->input('userParents', []) as $up) {
+            UserParent::updateOrCreate(
+                [
+                    'userId' => $userId
+                ],
+                [
+                    'pin' => $up['pin'],
+                    'email' => $up['email']
+                ]
+            );
+        }
+
         return response()->json(['message' => 'Data synced successfully.'], 200);
     }
 
@@ -124,12 +138,14 @@ class SyncController extends Controller
         $variableSessions = VariableSession::where('userId', $userId)->get();
         $blockPermanents = BlockPermanent::where('userId', $userId)->get();
         $dailyLimits = DailyLimit::where('userId', $userId)->get();
+        $userParents = UserParent::where('userId', $userId)->get();
 
         return response()->json([
             'blockSchedules' => $blockSchedules,
             'variableSessions' => $variableSessions,
             'blockPermanents' => $blockPermanents,
-            'dailyLimits' => $dailyLimits
+            'dailyLimits' => $dailyLimits,
+            'userParents' => $userParents
         ]);
     }
 }

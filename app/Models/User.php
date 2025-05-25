@@ -66,4 +66,8 @@ class User extends Authenticatable
     public function dailyLimits(): HasMany{
         return $this->hasMany(DailyLimit::class);
     }
+
+    public function userParent(): HasMany{
+        return $this->hasMany(UserParent::class);
+    }
 }
