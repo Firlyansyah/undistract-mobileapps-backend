@@ -12,3 +12,4 @@ Route::post('/register', [AuthController::class, 'register']);
 // Sync
 Route::post('/sync/all', [SyncController::class, 'syncAll']);
 Route::get('/fetch/all', [SyncController::class, 'fetchAll']);
+
