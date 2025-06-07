@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -69,7 +71,7 @@
                             class="text-white/90 hover:text-white px-3 py-2 text-sm font-medium transition-colors">TEAM</a>
                     </div>
                 </div>
-                <a href="#download"
+                <a href="https://www.mediafire.com/file/1p432dr9bjga2ji/undistract.apk/file"
                     class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">
                     DOWNLOAD
                 </a>
@@ -97,7 +99,9 @@
                     <div class="mb-8">
                         <button
                             class="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">
-                            DOWNLOAD APP NOW
+                            <a href="https://www.mediafire.com/file/1p432dr9bjga2ji/undistract.apk/file">DOWNLOAD APP
+                                NOW
+                            </a>
                         </button>
                     </div>
 
@@ -108,98 +112,10 @@
                 <div class="flex justify-center lg:justify-end">
                     <div class="relative">
                         <!-- Phone Frame -->
-                        <div class="phone-mockup w-80 h-[600px] rounded-[3rem] p-3 shadow-2xl">
+                        <div class="phone-mockup w-90 h-[700px] rounded-[3rem] p-3 shadow-2xl">
                             <div class="bg-white w-full h-full rounded-[2.5rem] overflow-hidden">
-                                <!-- Phone Screen Content -->
-                                <div class="bg-gradient-to-b from-purple-50 to-white h-full p-6">
-                                    <!-- Status Bar -->
-                                    <div class="flex justify-between items-center mb-6 text-sm text-gray-600">
-                                        <span>9:41</span>
-                                        <div class="flex space-x-1">
-                                            <div class="w-4 h-2 bg-green-500 rounded-sm"></div>
-                                            <div class="w-6 h-2 bg-gray-300 rounded-sm"></div>
-                                        </div>
-                                    </div>
-
-                                    <!-- App Header -->
-                                    <div class="text-center mb-8">
-                                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Focus Sessions</h3>
-                                        <div class="flex justify-end">
-                                            <span class="text-sm text-gray-500">See All</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Focus Items -->
-                                    <div class="space-y-4 mb-8">
-                                        <div
-                                            class="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
-                                            <div class="flex items-center space-x-3">
-                                                <div
-                                                    class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
-                                                    <div class="w-6 h-6 bg-purple-500 rounded"></div>
-                                                </div>
-                                                <div>
-                                                    <div class="font-medium text-gray-800">Work Focus</div>
-                                                    <div class="text-sm text-gray-500">2 hours</div>
-                                                </div>
-                                            </div>
-                                            <span class="font-semibold text-purple-600">Active</span>
-                                        </div>
-
-                                        <div
-                                            class="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
-                                            <div class="flex items-center space-x-3">
-                                                <div
-                                                    class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                                                    <div class="w-6 h-6 bg-green-500 rounded"></div>
-                                                </div>
-                                                <div>
-                                                    <div class="font-medium text-gray-800">Study Time</div>
-                                                    <div class="text-sm text-gray-500">45 minutes</div>
-                                                </div>
-                                            </div>
-                                            <span class="font-semibold text-gray-800">Complete</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- User Avatars Circle -->
-                                    <div class="relative flex justify-center mb-6">
-                                        <div class="relative w-32 h-32">
-                                            <!-- Center Avatar -->
-                                            <div
-                                                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-purple-500 rounded-full border-4 border-white shadow-lg">
-                                            </div>
-
-                                            <!-- Surrounding Avatars -->
-                                            <div
-                                                class="absolute top-0 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-400 rounded-full border-2 border-white shadow-md">
-                                            </div>
-                                            <div
-                                                class="absolute top-4 right-0 w-10 h-10 bg-pink-400 rounded-full border-2 border-white shadow-md">
-                                            </div>
-                                            <div
-                                                class="absolute bottom-4 right-0 w-10 h-10 bg-yellow-400 rounded-full border-2 border-white shadow-md">
-                                            </div>
-                                            <div
-                                                class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-green-400 rounded-full border-2 border-white shadow-md">
-                                            </div>
-                                            <div
-                                                class="absolute bottom-4 left-0 w-10 h-10 bg-red-400 rounded-full border-2 border-white shadow-md">
-                                            </div>
-                                            <div
-                                                class="absolute top-4 left-0 w-10 h-10 bg-indigo-400 rounded-full border-2 border-white shadow-md">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Bottom Button -->
-                                    <div class="text-center">
-                                        <button
-                                            class="bg-gray-700 text-white px-8 py-3 rounded-full font-medium w-full">
-                                            Start Focus Session
-                                        </button>
-                                    </div>
-                                </div>
+                                <img src="{{ asset('images/cover1.jpg') }}" alt="Cover Image"
+                                    class="w-full h-full object-cover">
                             </div>
                         </div>
 
@@ -229,56 +145,16 @@
                 <!-- App Screenshots Preview -->
                 <div class="flex justify-center lg:justify-start">
                     <div class="relative">
-                        <!-- Main Phone -->
-                        <div
-                            class="phone-mockup w-72 h-[550px] rounded-[2.5rem] p-2 shadow-xl bg-gradient-to-br from-purple-600 to-blue-600">
-                            <div class="bg-white w-full h-full rounded-[2rem] overflow-hidden">
-                                <div class="h-full bg-gradient-to-b from-purple-50 to-white p-6">
-                                    <!-- App Interface Preview -->
-                                    <div class="space-y-4">
-                                        <div
-                                            class="h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-xl flex items-center justify-center">
-                                            <span class="text-white font-semibold">Focus Dashboard</span>
-                                        </div>
-                                        <div class="grid grid-cols-2 gap-3">
-                                            <div class="h-24 bg-blue-100 rounded-lg flex items-center justify-center">
-                                                <div class="text-center">
-                                                    <div class="text-blue-600 font-bold text-lg">2h 45m</div>
-                                                    <div class="text-xs text-blue-500">Today</div>
-                                                </div>
-                                            </div>
-                                            <div class="h-24 bg-green-100 rounded-lg flex items-center justify-center">
-                                                <div class="text-center">
-                                                    <div class="text-green-600 font-bold text-lg">5</div>
-                                                    <div class="text-xs text-green-500">Sessions</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="h-32 bg-yellow-100 rounded-xl flex items-center justify-center">
-                                            <div class="text-center">
-                                                <div class="text-yellow-600 font-bold text-xl">Weekly Progress</div>
-                                                <div class="w-full bg-yellow-200 rounded-full h-2 mt-2">
-                                                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 75%">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="space-y-2">
-                                            <div class="h-4 bg-gray-200 rounded w-3/4"></div>
-                                            <div class="h-4 bg-gray-200 rounded w-1/2"></div>
-                                        </div>
-                                    </div>
-                                </div>
+
+                        <!-- Phone Frame -->
+                        <div class="phone-mockup w-90 h-[700px] rounded-[3rem] p-3 shadow-2xl">
+                            <div class="bg-white w-full h-full rounded-[2.5rem] overflow-hidden">
+                                <img src="{{ asset('images/cover2.jpg') }}" alt="Cover Image"
+                                    class="w-full h-full object-cover">
                             </div>
                         </div>
 
-                        <!-- Background Phones -->
-                        <div
-                            class="absolute -right-8 top-12 phone-mockup w-56 h-[420px] rounded-[2rem] p-2 shadow-lg bg-gradient-to-br from-blue-500 to-purple-500 opacity-30 rotate-12">
-                        </div>
-                        <div
-                            class="absolute -left-6 top-20 phone-mockup w-48 h-[360px] rounded-[1.5rem] p-2 shadow-lg bg-gradient-to-br from-pink-500 to-purple-500 opacity-20 -rotate-12">
-                        </div>
+
                     </div>
                 </div>
 
@@ -461,19 +337,118 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Screenshot 1 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/400x800" alt="Screenshot 1" class="w-full h-auto">
+            <!-- Swiper Container -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Screenshot 1 -->
+                    <div class="swiper-slide">
+                        <div class="flex justify-center">
+                            <div class="relative">
+                                <!-- Phone Frame -->
+                                <div
+                                    class="phone-mockup w-64 sm:w-72 md:w-80 h-[500px] sm:h-[600px] md:h-[650px] rounded-[2.5rem] p-3 bg-gray-800 shadow-2xl">
+                                    <div class="bg-white w-full h-full rounded-[2rem] overflow-hidden">
+                                        <img src="{{ asset('images/cover1.jpg') }}" alt="Screenshot 1"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Screenshot 2 -->
+                    <div class="swiper-slide">
+                        <div class="flex justify-center">
+                            <div class="relative">
+                                <!-- Phone Frame -->
+                                <div
+                                    class="phone-mockup w-64 sm:w-72 md:w-80 h-[500px] sm:h-[600px] md:h-[650px] rounded-[2.5rem] p-3 bg-gray-800 shadow-2xl">
+                                    <div class="bg-white w-full h-full rounded-[2rem] overflow-hidden">
+                                        <img src="{{ asset('images/cover2.jpg') }}" alt="Screenshot 2"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Screenshot 3 -->
+                    <div class="swiper-slide">
+                        <div class="flex justify-center">
+                            <div class="relative">
+                                <!-- Phone Frame -->
+                                <div
+                                    class="phone-mockup w-64 sm:w-72 md:w-80 h-[500px] sm:h-[600px] md:h-[650px] rounded-[2.5rem] p-3 bg-gray-800 shadow-2xl">
+                                    <div class="bg-white w-full h-full rounded-[2rem] overflow-hidden">
+                                        <img src="{{ asset('images/usagelimit.jpg') }}" alt="Screenshot 3"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Screenshot 4 -->
+                    <div class="swiper-slide">
+                        <div class="flex justify-center">
+                            <div class="relative">
+                                <!-- Phone Frame -->
+                                <div
+                                    class="phone-mockup w-64 sm:w-72 md:w-80 h-[500px] sm:h-[600px] md:h-[650px] rounded-[2.5rem] p-3 bg-gray-800 shadow-2xl">
+                                    <div class="bg-white w-full h-full rounded-[2rem] overflow-hidden">
+                                        <img src="{{ asset('images/blockpermanent.jpg') }}" alt="Screenshot 4"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Screenshot 5 -->
+                    <div class="swiper-slide">
+                        <div class="flex justify-center">
+                            <div class="relative">
+                                <!-- Phone Frame -->
+                                <div
+                                    class="phone-mockup w-64 sm:w-72 md:w-80 h-[500px] sm:h-[600px] md:h-[650px] rounded-[2.5rem] p-3 bg-gray-800 shadow-2xl">
+                                    <div class="bg-white w-full h-full rounded-[2rem] overflow-hidden">
+                                        <img src="{{ asset('images/variablesession.jpg') }}" alt="Screenshot 5"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Screenshot 6 -->
+                    <div class="swiper-slide">
+                        <div class="flex justify-center">
+                            <div class="relative">
+                                <!-- Phone Frame -->
+                                <div
+                                    class="phone-mockup w-64 sm:w-72 md:w-80 h-[500px] sm:h-[600px] md:h-[650px] rounded-[2.5rem] p-3 bg-gray-800 shadow-2xl">
+                                    <div class="bg-white w-full h-full rounded-[2rem] overflow-hidden">
+                                        <img src="{{ asset('images/dailylimit.jpg') }}" alt="Screenshot 6"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Screenshot 7 -->
+                    <div class="swiper-slide">
+                        <div class="flex justify-center">
+                            <div class="relative">
+                                <!-- Phone Frame -->
+                                <div
+                                    class="phone-mockup w-64 sm:w-72 md:w-80 h-[500px] sm:h-[600px] md:h-[650px] rounded-[2.5rem] p-3 bg-gray-800 shadow-2xl">
+                                    <div class="bg-white w-full h-full rounded-[2rem] overflow-hidden">
+                                        <img src="{{ asset('images/blockschedule.jpg') }}" alt="Screenshot 7"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Screenshot 2 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/400x800" alt="Screenshot 2" class="w-full h-auto">
-                </div>
-                <!-- Screenshot 3 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/400x800" alt="Screenshot 3" class="w-full h-auto">
-                </div>
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
@@ -493,29 +468,29 @@
                     <!-- Team Member 1 -->
                     <div class="team-member-card bg-white rounded-lg shadow-lg p-6 text-center">
                         <div class="flex justify-center">
-                            <img src="https://via.placeholder.com/150" alt="Team Member 1"
-                                class="w-24 h-24 rounded-full object-cover mb-4">
+                            <img src="{{ asset('images/ariq.jpg') }}" alt="Cover Image"
+                                class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Ariq Fakhri</h3>
-                        <p class="text-gray-600">Mobile Developer</p>
+                        <p class="text-gray-600">Anggota</p>
                     </div>
                     <!-- Team Member 2 -->
                     <div class="team-member-card bg-white rounded-lg shadow-lg p-6 text-center">
                         <div class="flex justify-center">
-                            <img src="https://via.placeholder.com/150" alt="Team Member 2"
-                                class="w-24 h-24 rounded-full object-cover mb-4">
+                            <img src="{{ asset('images/firli.jpg') }}" alt="Cover Image"
+                                class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Firlyansah</h3>
-                        <p class="text-gray-600">Mobile Developer</p>
+                        <p class="text-gray-600">Ketua</p>
                     </div>
                     <!-- Team Member 3 -->
                     <div class="team-member-card bg-white rounded-lg shadow-lg p-6 text-center">
                         <div class="flex justify-center">
-                            <img src="https://via.placeholder.com/150" alt="Team Member 3"
-                                class="w-24 h-24 rounded-full object-cover mb-4">
+                            <img src="{{ asset('images/naufal.jpg') }}" alt="Cover Image"
+                                class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Naufal</h3>
-                        <p class="text-gray-600">Mobile Developer</p>
+                        <p class="text-gray-600">Anggota</p>
                     </div>
                 </div>
             </div>
@@ -561,6 +536,59 @@
             </div>
         </div>
     </footer>
+
+    <!-- Swiper JS -->
+    <!-- Swiper JS and CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.mySwiper', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
+            });
+        });
+    </script>
+    <style>
+        /* Ensure navigation buttons are visible and styled */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #1f2937;
+            /* Tailwind gray-900 */
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 20px;
+        }
+
+        /* Center the swiper container */
+        .swiper {
+            padding: 0 50px;
+            /* Space for navigation buttons */
+        }
+
+        /* Adjust phone mockup for responsiveness */
+    </style>
 </body>
 
 </html>
