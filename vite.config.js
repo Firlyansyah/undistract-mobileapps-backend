@@ -10,4 +10,16 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
+
+     // Tambahkan ini
+     server: {
+        https: true,
+        host: "0.0.0.0",
+        hmr: {
+            protocol: "wss",
+        },
+    },
+    preview: {
+        https: true,
+    },
 });
